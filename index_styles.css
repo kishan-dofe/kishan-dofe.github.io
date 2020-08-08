@@ -1,0 +1,319 @@
+:root {
+	--K_color_background: #c4cbd5;
+	--K_color_header: #0B2C2D;
+	--K_color_hexagon: #b4082c;
+	
+	--K_color_rainbow_one: #a61e1e;
+	--K_color_rainbow_two: #c22f03;
+	--K_color_rainbow_three: #d5460d;
+	
+	--K_color_rainbow_base_one: #8e0b0b;
+	--K_color_rainbow_base_two: #e6610e;
+	
+	--K_color_footer: #0B2C2D;
+}
+
+@keyframes backdrop {
+	from {
+		background-color: var(--K_color_header);
+		}
+	to {
+		background-color: var(--K_color_background);
+		}
+}
+html, body {
+	font-family: 'Share Tech Mono', Monospace;
+	margin: 0vw;
+	
+	background-color: var(--K_color_background);
+	animation-name: backdrop;
+	animation-duration: 7s;
+}
+
+
+
+
+/* Start Hexagon */
+@keyframes hexagon {
+	from {
+		margin-bottom: 0vh;
+		}
+	to {
+		margin-bottom: -3vh;
+		}
+}
+#hexagon {
+	height: auto;
+	width: auto;
+	margin: auto;
+	margin-top: 100vw;
+	margin-bottom: -3vh;
+	animation-name: hexagon;
+	animation-duration: 6s;
+}
+
+/* Start Top and Bottom of Hex */
+#triangle-up, #triangle-down {
+	margin: auto;	/* centers */
+	width: 0px;
+	position: relative;
+	border-left: 35vw solid transparent;
+	border-right: 35vw solid transparent;
+}
+
+@keyframes color-triangle-up {
+	from {border-bottom: 0vh solid var(--K_color_header);}
+	to {border-bottom: 5vh solid var(--K_color_hexagon);}
+}
+#triangle-up {
+	border-bottom: 5vh solid var(--K_color_hexagon);
+	animation-name: color-triangle-up;
+	animation-duration: 4s;
+}
+
+@keyframes color-triangle-down {
+	from {border-top: 0vh solid var(--K_color_header);}
+	to {border-top: 5vh solid var(--K_color_hexagon);}
+}
+#triangle-down {
+	border-top: 5vh solid var(--K_color_hexagon);
+	animation-name: color-triangle-down;
+	animation-duration: 4s;
+}	
+/* End Top and Bottom of Hex */
+
+@keyframes rectangle {
+	0% {
+		background-color: var(--K_color_header);
+		color: var(--K_color_header);
+		
+		outline-color: rgba(11,44,45,0);
+	}
+	90% {
+		color: var(--K_color_hexagon);
+		background-color: var(--K_color_hexagon);
+		outline-color: #b80d0d;
+	}
+	100% {
+		color: rgba(255,255,255,1);
+	}
+}
+#rectangle {
+	margin: auto;	/* centers */
+	margin-bottom: -1px;
+	margin-top: -1px;
+	height: 10vh;	/* height of center */
+	width: 70vw;
+    display: flex;
+    font-size: 5vh;
+	text-align: center;
+    align-items:center;
+    justify-content:center;
+	outline-style: groove;
+	outline-width: 10px;
+	
+	
+	outline-color: #b80d0d;
+	background-color: var(--K_color_hexagon);
+	color: white;
+	animation: rectangle;
+	animation-duration:5s;
+}
+/* End Hexagon */
+
+
+
+
+/* Start Rainbow*/
+@keyframes rainbow {
+	0% {
+		max-width: 20vw; 
+		height:0vh;
+		}
+	80% {
+		max-width: 30vw;
+		height: 8vh;
+	}
+	100% {
+		max-width: 25vw; 
+		height: 8vh;
+		}
+}
+#button_div {
+	padding-top: -3vh;
+	margin: auto;
+	height: 8vh;
+	margin-top: 0.8vh;
+	max-width: 25vw;
+	animation-name: rainbow;
+	animation-duration: 4s;
+	text-align: center;
+}
+.rainbow {
+	float: left;
+	width: 33.33%;
+	height: 100%;
+}
+@keyframes button {
+	0% {
+		background-color: var(--K_color_header);
+		color: var(--K_color_header);
+		font-size: 0vh;
+		}
+	90% {
+		background-color: var(--K_color_rainbow_two);
+		color: var(--K_color_rainbow_two);
+		}
+	100% {
+		color: white;
+		font-size: 3vh;
+		background-color: var(--K_color_hexagon);
+		}
+	}
+#button {
+	font-family: 'Share Tech Mono', Monospace;
+	background-color: var(--K_color_hexagon);;
+	animation-name: button;
+	animation-duration: 7s;
+	color: white;
+	border:0;
+	width: 100%;
+	font-size: 3vh;
+	text-align: center;
+}
+/* End Rainbow*/
+
+
+
+/* Trapezoidal adventures*/
+@keyframes trapezoid {
+	0% {
+		max-width: 0vw; 
+		height:0vh;
+	}
+	100% {
+		max-width: 5vw; 
+		height: 60vh;
+	}
+}
+
+#trap_box {
+	margin: auto;
+	max-width: 5vw;
+	animation-name: trapezoid;
+	animation-duration: 4s;
+}
+.trapezoid {
+	position: fixed;
+	float: left;
+	width: 5%;
+	height: 100%;
+}
+
+@keyframes t-one {
+	0% {
+		background-color: var(--K_color_header); 
+		transform: skew(0deg);
+	}
+	20% {
+		transform: skew(-30deg);
+	}
+	100% {
+		transform: skew(15deg);
+		background-color: var(--K_color_rainbow_one);
+	}
+}
+#trap_l {
+	background-color: var(--K_color_rainbow_one);
+	animation-name: t-one;
+	animation-duration: 7s;
+	transform: skew(15deg);
+	z-index: 3;
+}
+
+@keyframes t-two {
+	from {background-color: var(--K_color_header);};
+	to {var(--K_color_rainbow_two);}}
+#trap_c {
+	background-color: var(--K_color_rainbow_two);
+	animation-name: t-two;
+	animation-duration: 7s;
+	z-index: 0;
+}
+
+@keyframes t-three {
+	0% {
+		background-color: var(--K_color_header); 
+		transform: skew(0deg);
+	}
+	20% {
+		transform: skew(30deg);
+	}
+	100% {
+		transform: skew(-15deg);
+		background-color: var(--K_color_rainbow_three);
+	}
+}
+#trap_r {
+	background-color: var(--K_color_rainbow_three);
+	animation-name: t-three;
+	animation-duration: 7s;
+	transform: skew(-15deg);
+	z-index: 2;
+}
+
+@keyframes b-one {
+	0% {
+		background-color: var(--K_color_header); 
+		transform: skew(0deg);
+		margin-top: 0vh;
+	}
+	20% {
+		transform: skew(-30deg);
+	}
+	100% {
+		transform: skew(25deg);
+		background-color: var(--K_color_rainbow_base_one);
+		margin-top: 8vh;
+	}
+}
+#trap_bl {
+	background-color: var(--K_color_rainbow_base_one);
+	animation-name: b-one;
+	animation-duration: 7s;
+	transform: skew(25deg);
+	margin-top: 8vh;
+	z-index: 4;
+}
+
+
+@keyframes b-two {
+	0% {
+		background-color: var(--K_color_header); 
+		transform: skew(0deg);
+		margin-top: 0vh;
+	}
+	20% {
+		transform: skew(30deg);
+	}
+	100% {
+		transform: skew(-25deg);
+		background-color: var(--K_color_rainbow_base_two);
+		margin-top: 8vh;
+	}
+}
+#trap_br {
+	background-color: var(--K_color_rainbow_base_two);
+	animation-name: b-two;
+	animation-duration: 7s;
+	transform: skew(-25deg);
+	margin-top: 8vh;
+	z-index: 3;
+}
+
+/* When the fun stops stop*/
+
+body { 
+   opacity: 0;
+   transition: opacity 4s;
+}
