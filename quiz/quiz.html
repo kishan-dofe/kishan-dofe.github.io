@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  
+	<head>
+		<link rel="stylesheet" href="quiz_styles_red.css" type="text/css" title="red">
+	
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width", user-scalable="no" ,initial-scale=1">
+		<title>Quiz - Select</title>
+		<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+		
+		
+		
+		<link rel="stylesheet" href="quiz_pos.css"  type="text/css">
+		<link rel="stylesheet" href="quiz_pos_wide.css" type="text/css" media="screen and (min-aspect-ratio: 1/1)">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Share+Tech+Mono">
+	</head>
+  
+  
+	<body scroll="no" style="overflow: hidden">
+		
+		<div class="header">
+			<div class="pediment"></div>
+			<div class="cornice"></div>
+		</div>	
+		<div class="frieze">
+			<div class="architrave"> 
+				<button class="red" onclick="makeRed()">Red<br>Theme</button> 
+			</div>
+			<div class="gap">
+				<div class="architrave_detail left"></div>
+				<div class="center_gap"></div>
+				<div class="architrave_detail right"></div>
+			</div>
+			<div class="architrave">
+				<button class="blue" onclick="makeBlue()">Blue<br>Theme</button> 
+			</div>
+		</div>
+		
+		<div class="main">
+			
+			<div class="column">
+				<div class="capital"></div>
+				<div class="pillars">
+					<div class="pillar l1"></div>
+					<div class="pillar l2"></div>
+				</div>
+				<div class="plinth"></div>
+			</div>
+			
+			<div class="content">
+				<div class="top_spacer"><p>Quizes</p></div>
+				<a class="spacer parent" id="back">
+					<span id="back" class="back child">Back</span>
+				</a>
+					<!--<a class="link" id="quiz_one" style="color: white;"></a>
+				<div class="spacer"></div>-->
+					<a class="link" id="quiz_two" style="color: white;"></a>
+				<div class="spacer"></div>
+					<a class="link" id="quiz_three" style="color: white;"></a>
+				<div class="spacer"></div>
+			</div>
+			
+			<div class="column">
+				<div class="capital"></div>
+				<div class="pillars">
+					<div class="pillar r1"></div>
+					<div class="pillar r2"></div>
+				</div>
+				<div class="plinth"></div>
+			</div>
+			
+		</div>
+		
+		<script src="style_switcher.js"></script>
+		<script src="quiz_linker.js"></script>
+		
+	</body>
+</html>

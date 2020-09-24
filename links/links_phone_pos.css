@@ -1,0 +1,79 @@
+:root {
+	--K_color_link: #b4082c;
+}
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-size: 4vh;
+}
+@keyframes hat {
+	from { flex:10}
+	90% {flex: 0.6;}
+	to {flex: 0.5;}
+}
+@keyframes clamp_left {
+	from {transform: skew(0deg);}
+	90% {transform: skew(-130deg);}
+	to {transform: skew(-120deg);}
+}
+@keyframes clamp_right {
+	from {transform: skew(0deg);}
+	90% {transform: skew(130deg);}
+	to {transform: skew(120deg);}
+}
+.clamp.top.right{ animation-duration: 5s; animation-name: clamp_right;transform: skew(120deg);}
+.clamp.top.left{ animation-duration: 5s; animation-name: clamp_left;transform: skew(-120deg);}
+.clamp.base.right{ animation-duration: 5s; animation-name: clamp_left;transform: skew(-120deg); }
+.clamp.base.left{ animation-duration: 5s; animation-name: clamp_right;transform: skew(120deg);}
+
+@keyframes spacer_base {
+	from {transform: rotateY(0deg); }
+	90% {transform: rotateY(-60deg);}
+	to {transform:transform: rotateY(0deg);}
+}
+.inner.top {display: none}
+.inner.base {animation-duration: 5s; animation-name: spacer_base; transform: rotateY(-55deg);}
+
+
+.link {background-color: var(--K_color_link); animation-duration: 5s; animation-name: link; z-index: 10;}
+.hat {flex:0.5; animation-name: hat; animation-duration: 5s;}
+
+.header_row{flex: 1.5; display: flex;}
+.horizontal_spacer_for_header {flex:0.2;}
+.header_cell{flex: 1; display: flex; flex-direction: column;}
+.vertical_spacer_for_header { flex: 1;}
+
+
+.clamp_row{flex: 0.5; display: flex;}
+.clamp{flex:1} 
+.spacer_for_clamp {flex:5;}
+
+
+.link_row{
+	flex: 5;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.spacer_for_link {flex: 1; width: 20%; border: 0;}
+.spacer_for_link.inner {flex: 1; width: 30%; }
+.link {
+	width: 80%;
+	flex: 5;
+	display: flex; 
+	flex-direction: column;
+}
+.vertical_spacer_for_link {flex: 1;}
+
+@keyframes mini_clamps {
+	from {width: 20%;}
+	90% {width: 70%;}
+	to {width: 40%;}
+}
+.spacer_for_link:not(.inner) {
+    animation-duration: 5s; animation-name: mini_clamps; width: 40%;
+}

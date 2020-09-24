@@ -1,0 +1,46 @@
+:root { 
+	--K_color_background: #c4cbd5;
+	--K_color_clamp: #8e0b0b;
+	--K_color_spacer: #a61e1e;
+	--K_color_header: #c22f03;
+	--K_color_link: #b4082c;
+}
+.spacer_for_link {background-color: var(--K_color_spacer);}
+.clamp {background-color: var(--K_color_clamp);}
+.header_cell {background-color: var(--K_color_header);}
+html, body {
+	font-family: Share Tech Mono;
+	background-color: var(--K_color_background);
+	color: white; 
+}
+a { color: white;}
+.header_cell{border: 1px solid black;}
+.clamp{border: 1px solid black;}
+.spacer_for_link{border: 1px solid black;}
+
+@media only screen and (min-aspect-ratio: 1/1) {
+	.spacer_for_link{border: 0;}
+	.spacer_for_link.inner{border: 1px solid black;}
+}
+.link{border: 1px solid black;}
+
+.animate-in {
+    -webkit-animation: fadeIn 3s ease-in;
+    animation: fadeIn 3s ease-in;
+}
+
+.animate-out {
+    -webkit-transition: opacity 2s;
+    transition: opacity 2s;
+    opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

@@ -1,0 +1,159 @@
+:root { 
+	--K_color_background: #c4cbd5;
+	--K_color_clamp: #8e0b0b;
+	--K_color_spacer: #a61e1e;
+	--K_color_header: #b4082c;
+	--K_color_link: #c22f03;
+}
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-size: 4vw;
+}
+@keyframes a {
+	from {transform: skew(0);}
+	20% {transform: skew(10deg);}
+	70% {transform: skew(-25deg);}
+	to {transform: skew(0deg);}
+}
+@keyframes c {
+	from {transform: skew(0);}
+	20% {transform: skew(-10deg);}
+	70% {transform: skew(25deg);}
+	to {transform: skew(0deg);}
+}
+@keyframes x {
+	from { transform:skew(120deg);height: 50%;}
+	80% { transform:skew(-60deg); height: 100%;}
+	90% { transform:skew(-80deg); height: 70%;}
+	to { transform:skew(-65deg); height: 80%;}
+}
+@keyframes y {
+	from { transform:skew(-120deg); height: 50%;}
+	80% { transform:skew(60deg); height: 100%;}
+	90% { transform:skew(80deg); height: 70%;}
+	to { transform:skew(65deg); height: 80%;}
+}
+#a {transform: skew(0deg); animation-name: a; animation-duration: 5s;}
+#b {transform: skew(0deg); animation-name: b; animation-duration: 5s;}
+#c {transform: skew(0deg); animation-name: c; animation-duration: 5s;}
+#x {transform: skew(-65deg); animation-name: x; animation-duration: 5s;}
+#y {transform: skew(65deg); animation-name: y; animation-duration: 5s;}
+
+@keyframes title {
+	from {color: var(--K_color_header);}
+	90% {color: var(--K_color_header);}
+	to {color: white;}
+}
+#header_title {animation-duration: 5s; animation-name: title;}
+
+@keyframes header {
+	from {flex:0;}
+	50% {flex: 0;}
+	to {flex: 1;}
+}
+@keyframes hat {
+	from { flex:10}
+	90% {flex: 0.6;}
+	to {flex: 0.5;}
+}
+@keyframes link_sides {
+	from { flex:10}
+	60% { flex:15}
+	90% {flex: 1.1;}
+	to {flex: 1;}
+}
+@keyframes link_inner {
+	from { flex:0;}
+	60% { flex:0;}
+	90% {flex: 0.9;}
+	to {flex: 1;}
+}
+@keyframes link {
+	from { flex:0}
+	60% { flex:0}
+	90% {flex: 0.9;}
+	to {flex: 1;}
+}
+@keyframes clamp {
+	from { flex:0}
+	60% { flex:0.5}
+	90% {flex: 1.6;}
+	to {flex: 2;}
+}
+@keyframes clamp_width_top {
+	from { flex:0}
+	60% { flex:0.5}
+	to {flex: 2;}
+}
+@keyframes clamp_width_base {
+	from { flex:0}
+	60% { flex:1}
+	to {flex: 1.5;}
+}
+
+@keyframes top_c_left {
+	from {transform: skew(-20deg);}
+	60% {transform: skew(120deg);}
+	to {transform: skew(5deg);}
+}
+@keyframes top_c_right {
+	from {transform: skew(20deg);}
+	60% {transform: skew(-120deg);}
+	to {transform: skew(-5deg);}
+}
+@keyframes base_c_left {
+	from {transform: skew(20deg);}
+	60% {transform: skew(-120deg);}
+	to {transform: skew(-5deg);}
+}
+@keyframes base_c_right {
+	from {transform: skew(-20deg);}
+	60% {transform: skew(120deg);}
+	to {transform: skew(5deg);}
+}
+.clamp.top.left {transform: skew(5deg);animation-name:top_c_left; animation-duration:5s;}
+.clamp.top.right {transform: skew(-5deg);animation-name:top_c_right; animation-duration:5s;}
+.clamp.base.left {transform: skew(-5deg);animation-name:base_c_left; animation-duration:5s;}
+.clamp.base.right {transform: skew(5deg);animation-name:base_c_right; animation-duration:5s;}
+
+.link{animation-name: link; animation-duration: 5s;}
+.hat {flex:0.5; animation-name: hat; animation-duration: 5s;}
+
+
+.header_row{flex: 1.5; display: flex;}
+.horizontal_spacer_for_header {flex:1;}
+.header_cell{flex: 1; display: flex; flex-direction: column; animation-name: header; animation-duration:5s;}
+.vertical_spacer_for_header { flex: 1; animation-name: header; animation-duration:5s;}
+
+.clamp{border: none;}
+.clamp_row{flex: 2; display: flex; animation-name: clamp; animation-duration: 5s;}
+.clamp.top{flex:1; animation-name: clamp_width_top; animation-duration: 5s;} 
+.clamp.base{flex:1; animation-name: clamp_width_base; animation-duration: 5s;} 
+.spacer_for_clamp {flex:10;}
+
+
+.link_row{
+	flex: 1.5;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+.spacer_for_link {flex: 1; height: 80%;z-index: 9;}
+.link {
+	height: 100%;
+	flex: 5;
+	display: flex; 
+	flex-direction: column;
+	z-index: 10;
+}
+.vertical_spacer_for_link {flex: 1;}
+
+.spacer_for_link {background-color: var(--K_color_background);animation-name: link_sides; animation-duration: 5s;}
+.spacer_for_link.inner {background-color: var(--K_color_clamp);animation-name: link_inner; animation-duration: 5s; border: none;}
+
+.inner.top {display: block}

@@ -1,0 +1,66 @@
+html, body {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;	
+	background-color: var(--K_color_background);
+	font-family: Share Tech Mono;
+}
+button {
+	width: 100%;
+	height: 100%;
+	background-color: var(--K_color_rainbow_one); /* Green */
+	border: none;
+	color: white;
+	font-size: 2vh;
+	font-family: Share Tech Mono;
+}
+button {
+  transition-duration: 0.4s;
+}
+
+button.red:hover {
+  background-color: var(--K_color_rainbow_two)
+  color: white;
+}
+button.blue:hover {
+  background-color: #134463;
+  color: white;
+}
+:root {
+	--K_color_background: #c4cbd5;
+	--K_color_header: #0B2C2D;
+	--K_color_hexagon: #b4082c;
+	
+	--K_color_rainbow_one: #a61e1e;
+	--K_color_rainbow_two: #c22f03;
+	--K_color_rainbow_three: #d5460d;
+	
+	--K_color_rainbow_base_one: #8e0b0b;
+	--K_color_rainbow_base_two: #e6610e;
+	
+	--K_color_footer: #0B2C2D;
+}
+p {color: white;}
+.header {background-color: blue; background-color: var(--K_color_background);}
+
+
+.column{background-color: green; background-color: var(--K_color_background);}
+.content{background-color: var(--K_color_background);}
+.top_spacer{ background-color: var(--K_color_rainbow_base_one); display: flex; justify-content: center; align-items: center; font-size: 4vw; border:solid 2px black;}
+.link{ background-color: var(--K_color_rainbow_one); border:solid 1px black;}
+.spacer{ background-color: var(--K_color_rainbow_two);}
+
+.pediment {color: var(--K_color_rainbow_base_one); }
+.cornice {background: var(--K_color_rainbow_base_one); border:solid 1px black; border-top:none;}
+
+.architrave {background-color: var(--K_color_rainbow_base_one); z-index: 10; border:solid 1px black;}
+.architrave_detail {background-color: var(--K_color_header)}
+
+.center_gap {background-color: var(--K_color_background);}
+
+.capital {color: var(--K_color_rainbow_base_one);}
+
+.pillar {background-color: var(--K_color_header);}
+
+.plinth {color: var(--K_color_header);}

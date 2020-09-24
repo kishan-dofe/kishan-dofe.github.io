@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico">
+		<link rel="stylesheet" href="universal_quiz_styles_phone.css" type="text/css">
+		<link rel="stylesheet" href="universal_quiz_styles_desktop.css" type="text/css" media="screen and (min-aspect-ratio: 1/1)">
+		<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Share+Tech+Mono">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Quiz Template</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	
+	<body scroll="yes" style="overflow: hidden;" onload="init()">
+  
+		<div class="container">
+			
+			<div class="end_spacer back"><span id="question_number">Question 1/n</span></div>
+			<div class="question">
+				<span id="question">Question Goes Here</span>
+			</div>
+			<div class="spacer" id="q"></div>
+			<div class="center" id="u">
+			
+				<div onclick="zero()" class="yes" id="x">
+					<span id="yes">Yes</span>
+				</div>
+				
+				<div class="center_s" style="display: flex; align-items: center; justify-content: center;"> 
+					<span id="z" style="display: flex; flex: 1; font-size: 4vh; text-align: center; justify-content: center;"></span> 
+				</div>
+				
+				<div onclick="one()" class="no" class="hide" id="y">
+					<span id="no">No</span>
+				</div>
+				
+			</div>
+			<div class="spacer" id="p"></div>
+			<div class="end_spacer"><a id="back">Quiz Selection</a></div>
+			
+			
+		</div>
+  
+		<script src="science_quiz.js"></script>
+	</body>
+</html>
